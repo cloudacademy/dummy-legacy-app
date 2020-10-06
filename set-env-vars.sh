@@ -1,0 +1,3 @@
+export APP_PORT_1=8081
+export APP_PORT_2=8082
+export APP_PORT_3=8083

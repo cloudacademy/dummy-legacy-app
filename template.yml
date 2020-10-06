@@ -1,0 +1,38 @@
+version: '3.3'
+
+services:
+  background:
+    depends_on:
+    - app_one  
+    - app_two
+    - app_three  
+    image: background
+    restart: always
+    environment:
+      APP_PORT_1: "${APP_PORT_1}"
+      APP_PORT_2: "${APP_PORT_2}"
+      APP_PORT_3: "${APP_PORT_3}"
+
+  app_one:
+    image: app
+    ports:
+    - "${APP_PORT_1}:${APP_PORT_1}"
+    restart: always
+    environment:
+      APP_PORT: "${APP_PORT_1}"
+      
+  app_two:
+    image: app
+    ports:
+    - "${APP_PORT_2}:${APP_PORT_2}"
+    restart: always
+    environment:
+      APP_PORT: "${APP_PORT_2}"
+      
+  app_three:
+    image: app
+    ports:
+    - "${APP_PORT_3}:${APP_PORT_3}"
+    restart: always
+    environment:
+      APP_PORT: "${APP_PORT_3}"
