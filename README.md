@@ -20,3 +20,14 @@ Meant to be run on a server and expects to be able to hit each web server by ext
 ```bash
 ./start.sh
 ```
+
+### Using in EC2 User Data
+
+#### Download, Extract, and Start
+
+```bash
+echo --- installing and starting dummy legacy app ---
+# Master as an example, consider using a release, branch or tag
+ZIP_URL="https://github.com/cloudacademy/dummy-legacy-app/archive/master.zip"
+cd /tmp && wget "$ZIP_URL" && unzip master.zip && cd dummy-legacy-app-master && ./start.sh && cd ~
+```
