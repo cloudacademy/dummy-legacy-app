@@ -4,7 +4,7 @@ import random
 import requests
 import os
 
-ip = get('https://checkip.amazonaws.com').text
+ip = get('https://checkip.amazonaws.com').text.strip
 ports = [os.environ['APP_PORT_1'], os.environ['APP_PORT_2'], os.environ['APP_PORT_3']]
 
 while True:
