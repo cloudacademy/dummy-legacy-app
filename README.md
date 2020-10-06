@@ -7,6 +7,12 @@ Can easily be modified or extended, replace flask with a socket server, add more
 
 Meant to be run on a server and expects to be able to hit each web server by external IP, so probably won't work when running locally.
 
+### Dependencies
+
+Docker
+Docker compose
+envsubst
+
 ### Instructions
 
 ```bash
